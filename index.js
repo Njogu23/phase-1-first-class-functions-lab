@@ -13,15 +13,13 @@ selectingDrivers.unshift(returnFirstTwoDrivers)
 selectingDrivers.push(returnLastTwoDrivers);
 
 const createFareMultiplier = num => {
-    return function(){
-        return num*5
-    }
+   return function fareQuintupler(){
+    return num*5
+   }
 }
 
-const fareDoubler = () =>{
-   return function(num){
-    return num*2
-   }(10)
+const fareDoubler = (fare) =>{
+    return 
 } 
 
 const fareTripler = () =>{
