@@ -1,36 +1,25 @@
-const drivers = ['Antonia', 'Nuru', 'Amari', 'Mo'];
-
-const returnFirstTwoDrivers = () => {
-    return [...drivers].splice(0, 2)
+const returnFirstTwoDrivers = function(arr){
+    return [...arr].slice(0, 2);
 }
 
-const returnLastTwoDrivers = () => {
-    return [...drivers].splice(2)
+const returnLastTwoDrivers = function(arr){
+    return [...arr].slice(2);
 }
 
-let selectingDrivers = [];
-selectingDrivers.unshift(returnFirstTwoDrivers)
-selectingDrivers.push(returnLastTwoDrivers);
+const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
 
 const createFareMultiplier = num => {
-   return function fareQuintupler(){
-    return num*5
-   }
+    return function(fare){
+        return fare * num;
+    }
 }
 
-const fareDoubler = (fare) =>{
-    return 
-} 
+const fareDoubler = fare => fare * 2;
 
-const fareTripler = () =>{
-    return function(num){
-        return num*3
-    }(12)
+const fareTripler = fare => fare * 3;
+
+const selectDifferentDrivers = (arr, func) => {
+    return func(arr);
 }
-
-const selectDifferentDrivers = (array, func) => {
-   return func(Math.random(array))
-}
-
 
 
